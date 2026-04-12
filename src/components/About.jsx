@@ -7,9 +7,9 @@ function About({ isDark }) {
     }}>
       <h2 style={{ fontSize: '32px', marginBottom: '16px', color: isDark ? '#fff' : '#616974ff', }}>About me</h2>
       <p style={{ fontSize: '16px', color: isDark ? '#aaa' : '#373434ff', lineHeight: '1.8', marginBottom: '32px' }}>
-        Hey! I'm Aditya, a first year Computer Engineering student at Mumbai University.
+        Hey! I'm Aditya, a first year Civil Engineering student at IIT Bombay.
         I love building things for the web and I'm currently learning React.
-        When I'm not coding, you'll find me playing cricket or watching F1.
+        When I'm not coding, you'll find me playing chess or listening to music!
       </p>
       <h3 style={{ fontSize: '20px', marginBottom: '16px', color: isDark ? '#fff' : '#111' }}>Skills</h3>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>

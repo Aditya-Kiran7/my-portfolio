@@ -5,7 +5,7 @@ function ProjectCard({ title, description, tech, isDark }) {
       borderRadius: '12px',
       padding: '24px',
       backgroundColor: isDark ? '#1a1a1a' : 'white',
-      transition: 'background-color 0.6s ease',
+      transition: 'background-color 0.6s ease, transform 0.2s ease, box-shadow 0.2s ease',
     }}>
       <h3 style={{ fontSize: '20px', marginBottom: '8px', color: isDark ? '#fff' : '#111' }}>{title}</h3>
       <p style={{ color: isDark ? '#aaa' : '#666', fontSize: '14px', lineHeight: '1.6', marginBottom: '16px' }}>{description}</p>

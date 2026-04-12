@@ -1,3 +1,5 @@
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+
 function Footer({ isDark }) {
   return (
     <footer style={{
@@ -7,10 +9,22 @@ function Footer({ isDark }) {
       color: isDark ? '#666' : '#888',
       fontSize: '14px',
     }}>
-      <p>Built with React by Aditya K. · 2025</p>
+      <p>Built with React by Aditya Kiran Parasa · April 2025</p>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '12px' }}>
-        <a href="https://github.com" target="_blank" style={{ color: isDark ? '#666' : '#888', textDecoration: 'none' }}>GitHub</a>
-        <a href="https://linkedin.com" target="_blank" style={{ color: isDark ? '#666' : '#888', textDecoration: 'none' }}>LinkedIn</a>
+        <a href="https://github.com/Aditya-Kiran7" target="_blank" style={{
+          color: isDark ? '#aaa' : '#555',
+          textDecoration: 'none',
+          fontSize: '28px',
+        }}>
+          <FaGithub />
+        </a>
+        <a href="https://linkedin.com/in/aditya-kiran-parasa" target="_blank" style={{
+          color: '#0077b5',
+          textDecoration: 'none',
+          fontSize: '28px',
+        }}>
+          <FaLinkedin />
+        </a>
       </div>
     </footer>
   )

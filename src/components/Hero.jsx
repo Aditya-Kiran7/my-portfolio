@@ -53,14 +53,14 @@ function Hero({ isDark }) {
         First year Civil Engineering student who loves building things.
       </p>
       <div style={{ display: 'flex', gap: '16px' }}>
-        <a href="#projects" className="hero"style={{
+        <a href="#projects" className="hero" style={{
           backgroundColor: isDark ? '#fff' : 'black',
           color: isDark ? '#111' : 'white',
           padding: '12px 28px',
           borderRadius: '8px',
           textDecoration: 'none',
         }}>See my work</a>
-        <a href="#contact" className="hero"style={{
+        <a href="#contact" className="hero" style={{
           border: `1px solid ${isDark ? '#fff' : 'black'}`,
           padding: '12px 28px',
           borderRadius: '8px',
