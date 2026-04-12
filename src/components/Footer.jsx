@@ -9,7 +9,7 @@ function Footer({ isDark }) {
       color: isDark ? '#666' : '#888',
       fontSize: '14px',
     }}>
-      <p>Built with React by Aditya Kiran Parasa · April 2025</p>
+      <p>Built with React by Aditya Kiran Parasa · April 2026</p>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '12px' }}>
         <a href="https://github.com/Aditya-Kiran7" target="_blank" style={{
           color: isDark ? '#aaa' : '#555',
