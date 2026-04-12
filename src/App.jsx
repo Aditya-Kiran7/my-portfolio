@@ -9,11 +9,12 @@ import './styles.css'
 function App() {
   const [isDark, setIsDark] = useState(false)
   return (
-    <div style={{
-      backgroundColor: isDark ? '#111' : '#fff',
-      color: isDark ? '#fff' : '#111',
-      minHeight: '100vh',
-    }}>
+     <div style={{
+  backgroundColor: isDark ? '#111' : '#fff',
+  color: isDark ? '#fff' : '#111',
+  minHeight: '100vh',
+  transition: 'background-color 0.3s ease, color 0.3s ease',
+}}>
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <Hero isDark={isDark} />
       <About isDark={isDark} />

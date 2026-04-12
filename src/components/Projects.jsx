@@ -23,6 +23,7 @@ function Projects({ isDark }) {
     <section id="projects" style={{
       padding: '80px 40px',
       backgroundColor: isDark ? '#111' : '#f9f9f9',
+
     }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h2 style={{ fontSize: '32px', marginBottom: '32px', color: isDark ? '#fff' : '#111' }}>Projects</h2>

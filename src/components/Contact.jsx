@@ -5,7 +5,7 @@ function Contact({ isDark }) {
       maxWidth: '800px',
       margin: '0 auto',
     }}>
-      <h2 style={{ fontSize: '32px', marginBottom: '8px', color: isDark ? '#fff' : '#111' }}>Contact me</h2>
+      <h2 style={{ fontSize: '32px', marginBottom: '8px', color: isDark ? '#fff' : '#111',}}>Contact me</h2>
       <p style={{ color: isDark ? '#aaa' : '#666', marginBottom: '32px' }}>
         Feel free to reach out for collaborations or just a chat!
       </p>
