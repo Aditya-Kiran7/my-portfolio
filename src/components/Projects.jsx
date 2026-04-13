@@ -20,18 +20,15 @@ const projects = [
 
 function Projects({ isDark }) {
   return (
-    <section id="projects" style={{
+    <section id="projects" className="projects-section" style={{
       padding: '80px 40px',
       backgroundColor: isDark ? '#000000' : '#f9f9f9',
-
     }}>
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-        <h2 style={{ fontSize: '32px', marginBottom: '32px', color: isDark ? '#fff' : '#111' }}>Projects</h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '24px',
-        }}>
+        <h2 style={{ fontSize: '32px', marginBottom: '32px', color: isDark ? '#fff' : '#111' }}>
+          Projects
+        </h2>
+        <div className="projects-grid">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}

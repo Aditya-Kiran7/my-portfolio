@@ -1,60 +1,208 @@
-.project-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-.nav{
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-.nav:hover{
-  transform : translateY(-2px);
-  box-shadow: 0 12px 24px rgba(57, 120, 220, 0.1);
-}
-
-.nav-switch:hover {
-  border-color: #ecebff;
-  color: #6c63ff;
-}
-.hero{
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-.hero:hover{
-  transform : translateY(-5px);
-  box-shadow: 0 12px 24px rgba(1, 18, 249, 0.1);
-}
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(12, 18, 208, 0.1);
-}
-
-.btn-primary:hover {
-  opacity: 0.85;
-  transform: scale(1.03);
-  transition: all 0.2s ease;
-}
-
-.nav-link:hover {
-  opacity: 0.6;
-  transition: opacity 0.2s ease;
-}
 * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   transition: background-color 0.6s ease, color 0.35s ease, border-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 @keyframes blink {
-  
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 @keyframes colorCycle {
   0%   { filter: hue-rotate(0deg); }
   100% { filter: hue-rotate(360deg); }
 }
 
+/* Navbar */
 .navbar-switch-gradient {
   animation: colorCycle var(--grad-speed, 2s) linear infinite;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
 
+.nav {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.nav:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(57, 120, 220, 0.1);
+}
 
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* hamburger hidden by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: 200;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* mobile drawer */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 24px 20px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.mobile-menu.open {
+  display: flex;
+}
+.mobile-menu button {
+  width: 100%;
+  text-align: left;
+}
+
+/* Hero */
+.hero {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.hero:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(1, 18, 249, 0.1);
+}
+
+/* Projects */
+.project-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(12, 18, 208, 0.1);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Contact */
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-name-email {
+  display: flex;
+  gap: 16px;
+}
+
+/* Buttons */
+.btn-primary:hover {
+  opacity: 0.85;
+  transform: scale(1.03);
+  transition: all 0.2s ease;
+}
+.nav-link:hover {
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+.nav-switch:hover {
+  border-color: #ecebff;
+  color: #6c63ff;
+}
+
+/* ─── RESPONSIVE ────────────────────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Navbar: hide desktop links, show hamburger */
+  .nav-links {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero-section {
+    padding: 72px 20px !important;
+  }
+  .hero-section h1 {
+    font-size: 32px !important;
+  }
+  .hero-section p {
+    font-size: 16px !important;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* About */
+  .about-section {
+    padding: 60px 20px !important;
+  }
+
+  /* Projects */
+  .projects-section {
+    padding: 60px 20px !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact */
+  .contact-section {
+    padding: 60px 20px !important;
+  }
+  .contact-name-email {
+    flex-direction: column;
+  }
+
+  /* Footer */
+  .footer-section {
+    padding: 24px 20px !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .hero-section h1 {
+    font-size: 26px !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
