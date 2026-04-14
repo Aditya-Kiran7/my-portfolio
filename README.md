@@ -3,8 +3,8 @@
 Hi, this is my personal portfolio website which demostrates some basics of css and reactJS. Let me quickly summarise about this website and how I built it.
 
 1. Used component folder which includes different sections of the website
-2. the folder type is .jsx which returns functions as a whole to the main "App.jsx"
-3. ReactJS makes it easy to code any website by making long html/javascript files into single .jsx files. It also contains its own animation/transition libraries as well like useState etc. which are used for recording data of previous like in dark mode etc.
+2. the folder contains files of type .jsx which returns functions as a whole to the main "App.jsx"
+3. ReactJS makes it easy to code any website by making long html/javascript files into single .jsx files. It also contains its own animation/transition libraries as well things like useState etc. which are used for recording data of previous like in dark mode etc.
 4. The website IS responsive. This is done by updating the style.css part.
 
 # About the design
